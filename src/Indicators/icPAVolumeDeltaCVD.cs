@@ -9,6 +9,7 @@
 // Website:      https://icpriceaction.com
 // Repository:   https://github.com/icPriceAction/volume-delta-cvd
 // YouTube:      https://youtube.com/@icPriceAction
+// Support:      https://buymeacoffee.com/icpriceaction
 //
 // License:      Free for personal trading use. Commercial resale, redistribution,
 //               or repackaging is strictly prohibited. See LICENSE in official repository.
@@ -18,7 +19,7 @@
 //               delta flips, price/CVD divergences and real-time alerts.
 //
 // Changelog:
-//   v2.4.3 (2026-11-01) - Initial public release. Cleaned and optimized by icPriceAction.
+//   v2.4.3              - Initial public release. Cleaned and optimized by icPriceAction.
 //   v2.4.2              - Properties regrouped in a logical order with consistent names and
 //                           concise descriptions.
 //   v2.4.1              - Implementation notes moved into the file header; changelog added.
@@ -214,7 +215,9 @@ namespace NinjaTrader.NinjaScript.Indicators.icPA
         {
             if (State == State.SetDefaults)
             {
-                Description = @"Tick-accurate Volume Delta and Cumulative Volume Delta built from a hidden 1-tick series, with CVD resets, signal line, delta flips, price/CVD divergences and alerts. No Tick Replay required; runs On Each Tick. Load chart data by Days and enable Break at EOD on Tick, Volume and Range charts. Developed by Istvan Cebrian | icPriceAction.com";
+                Description = "Tick-accurate Volume Delta and Cumulative Volume Delta built from a hidden 1-tick series, with CVD resets, signal line, delta flips, price/CVD divergences and alerts. No Tick Replay required; runs On Each Tick. Load chart data by Days and enable Break at EOD on Tick, Volume and Range charts.\r\n"
+                            + "Developed by Istvan Cebrian | https://icpriceaction.com\r"
+					        + "Support this free tool: https://buymeacoffee.com/icpriceaction";
                 Name = "icPA - Volume Delta CVD";
                 Calculate = Calculate.OnEachTick;
                 IsOverlay = false;

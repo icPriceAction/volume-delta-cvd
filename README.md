@@ -2,10 +2,11 @@
 
 [![NinjaTrader 8](https://img.shields.io/badge/Platform-NinjaTrader%208-black.svg)](https://ninjatrader.com)
 [![License: Personal Use](https://img.shields.io/badge/License-Personal%20Use-6E6E6E.svg)](#license)
+[![Support: Buy Me a Coffee](https://img.shields.io/badge/Support-Buy%20Me%20a%20Coffee-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/icpriceaction)
 [![YouTube Guide](https://img.shields.io/badge/YouTube-Watch%20Walkthrough-red.svg)](https://youtube.com/@icPriceAction)
 [![Website](https://img.shields.io/badge/Website-icpriceaction.com-111213.svg)](https://icpriceaction.com)
 
-A specialized Indicator engineered for Price Action day trading. It plots tick-accurate per-bar Volume Delta or Cumulative Volume Delta (CVD) in its own panel, built from a hidden 1-tick series, so no Tick Replay is required.
+A specialized Indicator engineered for Price Action and Order Flow trading. It plots tick-accurate per-bar Volume Delta or Cumulative Volume Delta (CVD) in its own panel, built from a hidden 1-tick series, so no Tick Replay is required.
 
 ---
 
@@ -20,12 +21,30 @@ Watch the complete breakdown of parameters, price action context, and chart exam
 
 ---
 
+## ☕ Support the Project
+
+All tools by **icPriceAction** are **100% free and open-source for personal trading use**. There are no paywalls, subscriptions, or locked features and there never will be!
+
+Developing, optimizing for zero latency on multiple charts/instruments, and maintaining documentation and releases takes a **considerable amount of personal time and ongoing effort**. 
+
+If this tool saves you screen time, improves your execution, or cleans up your charts, buying a coffee is the best way to support continued development:
+
+<p align="left">
+  <a href="https://buymeacoffee.com/icpriceaction" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="190">
+  </a>
+</p>
+
+> **[☕ Support Development on Buy Me a Coffee](https://buymeacoffee.com/icpriceaction)**
+
+---
+
 ## ⚡ Key Features
 
 - **Delta & CVD Candles or Line:** Each trade is classified as buying or selling at the bid/ask (falling back to the tick rule inside the spread or without quotes). The panel then plots per-bar delta or running CVD as candles with intrabar high/low, or CVD as a line. An optional EMA/SMA signal line and zero line can be added. CVD resets per session, daily at a set time, weekly, at an anchor time, or never.
 - **Order Flow Context Marks:** These cover delta flips (delta crossed zero within the bar and closed on the other side), delta / delta % / buy-sell labels under each bar, and optional price-bar coloring by delta. Divergences between price swings and CVD can be drawn on the price panel and/or the indicator panel.
 - **Real-Time Alerts & Strategy Access:** Alerts are available for divergences, delta flips, CVD zero crosses, signal line crosses and an intrabar bar-delta threshold. Public data series (Delta, Cvd, BuyVolume, SellVolume, DeltaPercent, DeltaFlip, DivergenceSignal and more) can be read from your own strategies and indicators.
-- **PATS & Context Aligned:** Designed for Price Action principles (Mack / Thomas Wade) and disciplined futures execution.
+- **PATS & Context Aligned:** Designed for Price Action principles and disciplined futures execution.
 - **Zero Chart Lag:** Native C# execution optimized to prevent UI freezes on high-frequency 2000-tick ES/MES charts.
 - **Clean Visuals:** Complementary default palette that preserves candlestick clarity without chart clutter.
 - **Fully Customizable:** Configure colors, thresholds, offsets, and alerts via the native NT8 settings panel.
@@ -46,7 +65,7 @@ Watch the complete breakdown of parameters, price action context, and chart exam
 ## 📥 Installation Guide
 
 1. Head to the **[Releases](https://github.com/icPriceAction/volume-delta-cvd/releases)** tab of this repository.
-2. Download the latest release `.zip` file (`icPriceAction_icPAVolumeDeltaCVD_v2.4.3.zip`).
+2. Download the latest release `.zip` file.
    - *Note: Do NOT extract or unzip the file.*
 3. Open **NinjaTrader 8**.
 4. In the Control Center, navigate to:
@@ -119,7 +138,7 @@ Bars before the first full session are never set, so check `IsValidDataPoint` be
 
 ## 📝 Changelog
 
-- **v2.4.3** (2026-11-01) - Initial public release. Cleaned and optimized by icPriceAction.
+- **v2.4.3**              - Initial public release. Cleaned and optimized by icPriceAction.
 - **v2.4.2**              - Properties regrouped in a logical order with consistent names and concise descriptions.
 - **v2.4.1**              - Implementation notes moved into the file header; changelog added.
 - **v2.4.0**              - Audit fixes: closed-bar evaluation one bar later, Calculate forced to On Each Tick, delta flips require a zero cross, unique alert IDs, per-trade delta-threshold alert, signal line in auto-scale, faster label measuring.
